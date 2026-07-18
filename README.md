@@ -42,5 +42,5 @@ The **Joomla Subscription and Notifications Package** is a set of two extensions
 
 
 
-&#x20;License AGPL-3.0 - \[LICENCE](https://github.com/bshumylo/Joomla\_subscription\_notifications/blob/main/LICENSE)
+&#x20;License AGPL-3.0 - [LICENCE](https://github.com/bshumylo/Joomla\_subscription\_notifications/blob/main/LICENSE)
 
