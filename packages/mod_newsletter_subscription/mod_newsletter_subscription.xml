@@ -7,7 +7,7 @@
     <creationDate>2026-07-19</creationDate>
     <copyright>(C) 2022-2025 Antonina Zdebska; (C) 2026 Bogdan Shumylo</copyright>
     <license>GNU General Public License version 3 or later; https://www.gnu.org/licenses/gpl-3.0</license>
-    <version>2.0.1</version>
+    <version>2.0.0</version>
     <description>MOD_NEWSLETTER_SUBSCRIPTION_XML_DESCRIPTION</description>
     <namespace path="src">Zdebska\Module\NewsletterSubscription</namespace>
     <scriptfile>script.php</scriptfile>
