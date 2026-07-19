@@ -47,13 +47,13 @@ Notifications are sent only for articles **created in the published state** in t
 
 This project is a fork of [pkg_subscription_and_notifications](https://github.com/AntoninaZz/pkg_subscription_and_notifications) by **Antonina Zdebska**, originally released in 2022 under the GPL-3.0.
 
-Version 2.x is an extensive rework by **Bogdan Shumylo**: port to Joomla 6, namespaced extensions and DI service providers, database-backed subscriber storage replacing the plaintext file, CSRF protection, Mattermost support, translations and an automated test and release pipeline. The original design and functionality remain the work of the original author.
+Version 2.x is an extensive rework by **bshumylo**: port to Joomla 6, namespaced extensions and DI service providers, database-backed subscriber storage replacing the plaintext file, CSRF protection, Mattermost support, translations and an automated test and release pipeline. The original design and functionality remain the work of the original author.
 
 ## License
 
 GPL-3.0-or-later — see [LICENSE](LICENSE).
 
 Copyright (C) 2022-2025 Antonina Zdebska
-Copyright (C) 2026 Bogdan Shumylo
+Copyright (C) 2026 bshumylo
 
 This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.

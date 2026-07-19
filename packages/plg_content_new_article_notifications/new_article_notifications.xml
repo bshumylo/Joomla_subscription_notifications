@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="plugin" group="content" method="upgrade">
     <name>PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS</name>
-    <author>Bogdan Shumylo</author>
-    <authorEmail>bshumylo@gmail.com</authorEmail>
+    <author>bshumylo</author>
+    <authorEmail>bshumylo@yahoo.com</authorEmail>
     <authorUrl>https://github.com/bshumylo</authorUrl>
     <creationDate>2026-07-19</creationDate>
-    <copyright>(C) 2022-2025 Antonina Zdebska; (C) 2026 Bogdan Shumylo</copyright>
+    <copyright>(C) 2022-2025 Antonina Zdebska; (C) 2026 bshumylo</copyright>
     <license>GNU General Public License version 3 or later; https://www.gnu.org/licenses/gpl-3.0</license>
     <version>2.0.0</version>
     <description>PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_XML_DESCRIPTION</description>

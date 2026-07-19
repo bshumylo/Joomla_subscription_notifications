@@ -4,12 +4,12 @@
     <packagename>subscription_and_notifications</packagename>
     <version>2.0.0</version>
     <creationDate>2026-07-19</creationDate>
-    <author>Bogdan Shumylo</author>
-    <authorEmail>bshumylo@gmail.com</authorEmail>
+    <author>bshumylo</author>
+    <authorEmail>bshumylo@yahoo.com</authorEmail>
     <authorUrl>https://github.com/bshumylo</authorUrl>
-    <packager>Bogdan Shumylo</packager>
+    <packager>bshumylo</packager>
     <packagerurl>https://github.com/bshumylo</packagerurl>
-    <copyright>(C) 2022-2025 Antonina Zdebska; (C) 2026 Bogdan Shumylo</copyright>
+    <copyright>(C) 2022-2025 Antonina Zdebska; (C) 2026 bshumylo</copyright>
     <license>GNU General Public License version 3 or later; https://www.gnu.org/licenses/gpl-3.0</license>
     <description>Subscribe &amp; Notify — newsletter subscription and new article notifications for Joomla. Visitors subscribe by email or Telegram through the subscription module; the content plugin automatically announces every newly published article by email, Telegram and Mattermost (incoming webhook). Subscribers are stored in the site database. Keywords: newsletter, subscribe, subscription, notification, email, Telegram, Mattermost, alerts.</description>
     <scriptfile>pkg_script.php</scriptfile>
