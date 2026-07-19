@@ -1,0 +1,15 @@
+# Normalize line endings so Windows checkouts don't show phantom diffs
+* text=auto eol=lf
+
+# Shell scripts must keep LF or they break inside the Docker containers
+*.sh text eol=lf
+build.sh text eol=lf
+
+# Windows batch files need CRLF
+*.bat text eol=crlf
+
+# Never touch binaries
+*.zip binary
+*.png binary
+*.jpg binary
+*.gif binary
