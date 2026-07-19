@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="plugin" group="content" method="upgrade">
+    <name>PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS</name>
+    <author>Antonina Zdebska</author>
+    <authorEmail>aazdebska.fitu19@kubg.edu.ua</authorEmail>
+    <authorUrl>https://github.com/AntoninaZz</authorUrl>
+    <creationDate>2026-07-19</creationDate>
+    <copyright>(C) 2022-2026 Antonina Zdebska</copyright>
+    <license>GNU General Public License version 3; https://www.gnu.org/licenses/gpl-3.0</license>
+    <version>2.0.0</version>
+    <description>PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_XML_DESCRIPTION</description>
+    <namespace path="src">Zdebska\Plugin\Content\NewArticleNotifications</namespace>
+    <files>
+        <folder plugin="new_article_notifications">services</folder>
+        <folder>src</folder>
+        <folder>language</folder>
+    </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/plg_content_new_article_notifications.ini</language>
+        <language tag="en-GB">language/en-GB/plg_content_new_article_notifications.sys.ini</language>
+        <language tag="uk-UA">language/uk-UA/plg_content_new_article_notifications.ini</language>
+        <language tag="uk-UA">language/uk-UA/plg_content_new_article_notifications.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="send_emails" type="radio" default="0" layout="joomla.form.field.radio.switcher"
+                       label="PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_FIELD_SEND_EMAILS_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="newsletter" type="text"
+                       label="PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_FIELD_NEWSLETTER_LABEL"
+                       hint="MySite Newsletter"/>
+                <field name="bccmax" type="number" default="50" min="1" max="500" step="1"
+                       label="PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_FIELD_BCCMAX_LABEL"/>
+                <field name="send_tg" type="radio" default="0" layout="joomla.form.field.radio.switcher"
+                       label="PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_FIELD_SEND_TG_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="token" type="text"
+                       label="PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_FIELD_TOKEN_LABEL"
+                       hint="123456:ABC-DEF1234ghIkl-zyx57W2v1u123ew11"/>
+                <field name="channel" type="text"
+                       label="PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_FIELD_CHANNEL_LABEL"
+                       hint="@channel"/>
+                <field name="send_mm" type="radio" default="0" layout="joomla.form.field.radio.switcher"
+                       label="PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_FIELD_SEND_MM_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="mm_webhook" type="url" filter="url"
+                       label="PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_FIELD_MM_WEBHOOK_LABEL"
+                       description="PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_FIELD_MM_WEBHOOK_DESC"
+                       hint="https://mattermost.example.com/hooks/xxxxxxxxxxxxxxxxxxxxxxxxxx"/>
+                <field name="cat_id" type="category" extension="com_content" multiple="true" size="10" default=""
+                       label="PLG_CONTENT_NEW_ARTICLE_NOTIFICATIONS_FIELD_CATID_LABEL"/>
+            </fieldset>
+        </fields>
+    </config>
+</extension>

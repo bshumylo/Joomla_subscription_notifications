@@ -1,39 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.6.5" client="site" method="upgrade">
-    <name>Newsletter Subscription Module</name>
-    <version>1.0.0</version>
-	<creationDate>September 2022</creationDate>
-	<license>https://www.gnu.org/licenses/gpl-3.0</license>
-	<copyright>Copyright</copyright>
-	<author>Antonina Zdebska</author>
-	<authorEmail>aazdebska.fitu19@kubg.edu.ua</authorEmail>
-	<authorUrl>http://wiki.kubg.edu.ua/%D0%9A%D0%BE%D1%80%D0%B8%D1%81%D1%82%D1%83%D0%B2%D0%B0%D1%87:Aazdebska.fitu19</authorUrl>
-	<description>This module allows your site visitors subscribe for news using email and/or via telegram channel. 
-	For automatically notify your subscribers on new articles via telegram and/or email install 
-	Notifications on New Article - Content Plugin.</description>
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="module" client="site" method="upgrade">
+    <name>MOD_NEWSLETTER_SUBSCRIPTION</name>
+    <author>Antonina Zdebska</author>
+    <authorEmail>aazdebska.fitu19@kubg.edu.ua</authorEmail>
+    <authorUrl>https://github.com/AntoninaZz</authorUrl>
+    <creationDate>2026-07-19</creationDate>
+    <copyright>(C) 2022-2026 Antonina Zdebska</copyright>
+    <license>GNU General Public License version 3; https://www.gnu.org/licenses/gpl-3.0</license>
+    <version>2.0.0</version>
+    <description>MOD_NEWSLETTER_SUBSCRIPTION_XML_DESCRIPTION</description>
+    <namespace path="src">Zdebska\Module\NewsletterSubscription</namespace>
+    <scriptfile>script.php</scriptfile>
     <files>
-        <filename>mod_newsletter_subscription.xml</filename>
-        <filename module="mod_newsletter_subscription">mod_newsletter_subscription.php</filename>
-        <filename>helper.php</filename>
-        <filename>tmpl/default.php</filename>
-        <filename>css/style.css</filename>
-        <filename>subscribers.txt</filename>
+        <folder module="mod_newsletter_subscription">services</folder>
+        <folder>src</folder>
+        <folder>tmpl</folder>
+        <folder>css</folder>
+        <folder>language</folder>
     </files>
+    <languages>
+        <language tag="en-GB">language/en-GB/mod_newsletter_subscription.ini</language>
+        <language tag="en-GB">language/en-GB/mod_newsletter_subscription.sys.ini</language>
+        <language tag="uk-UA">language/uk-UA/mod_newsletter_subscription.ini</language>
+        <language tag="uk-UA">language/uk-UA/mod_newsletter_subscription.sys.ini</language>
+    </languages>
     <config>
         <fields name="params">
-			<fieldset name="basic">
-                <field name="email" type="radio" default="0" label="Enable email subscription" class="btn-group btn-group-yesno">
-  					<option value="1">JYES</option>
-  					<option value="0">JNO</option>
-				</field>
-				<field name="tg" type="radio" default="0" label="Enable telegram subscription" class="btn-group btn-group-yesno">
-  					<option value="1">JYES</option>
-  					<option value="0">JNO</option>
-				</field>
-				<field name="subject" type="text" label="Greeting email subject" hint="MySite News"/>
-				<field name="message" type="textarea" label="Greeting email message" rows="10" filter="raw" hint="You have successfully subscribed to MySite news. When a new article appears on the site, you will automatically receive a notification."/>
-				<field name="link" type="text" label="Telegram channel link" hint="https://t.me/channel"/>
-			</fieldset>
-		</fields>
+            <fieldset name="basic">
+                <field name="email" type="radio" default="0" layout="joomla.form.field.radio.switcher"
+                       label="MOD_NEWSLETTER_SUBSCRIPTION_FIELD_EMAIL_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="tg" type="radio" default="0" layout="joomla.form.field.radio.switcher"
+                       label="MOD_NEWSLETTER_SUBSCRIPTION_FIELD_TG_LABEL">
+                    <option value="0">JNO</option>
+                    <option value="1">JYES</option>
+                </field>
+                <field name="subject" type="text"
+                       label="MOD_NEWSLETTER_SUBSCRIPTION_FIELD_SUBJECT_LABEL"
+                       hint="MOD_NEWSLETTER_SUBSCRIPTION_FIELD_SUBJECT_HINT"/>
+                <field name="message" type="textarea" rows="10" filter="safehtml"
+                       label="MOD_NEWSLETTER_SUBSCRIPTION_FIELD_MESSAGE_LABEL"
+                       hint="MOD_NEWSLETTER_SUBSCRIPTION_FIELD_MESSAGE_HINT"/>
+                <field name="link" type="url" filter="url"
+                       label="MOD_NEWSLETTER_SUBSCRIPTION_FIELD_LINK_LABEL"
+                       hint="https://t.me/channel"/>
+            </fieldset>
+        </fields>
     </config>
 </extension>

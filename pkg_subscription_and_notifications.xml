@@ -1,24 +1,20 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<extension type="package" version="3.6.5" method="upgrade">
+<?xml version="1.0" encoding="UTF-8"?>
+<extension type="package" method="upgrade">
     <name>Subscription and Notifications Package</name>
-    <version>1.0.0</version>
-    <creationDate>September 2022</creationDate>
-    <license>https://www.gnu.org/licenses/gpl-3.0</license>
-	<copyright>Copyright</copyright>
     <packagename>subscription_and_notifications</packagename>
+    <version>2.0.0</version>
+    <creationDate>2026-07-19</creationDate>
     <author>Antonina Zdebska</author>
     <authorEmail>aazdebska.fitu19@kubg.edu.ua</authorEmail>
-    <authorUrl>http://wiki.kubg.edu.ua/%D0%9A%D0%BE%D1%80%D0%B8%D1%81%D1%82%D1%83%D0%B2%D0%B0%D1%87:Aazdebska.fitu19</authorUrl>
-    <packager>Antonina Zdebska</packager>
-    <packagerurl>http://wiki.kubg.edu.ua/%D0%9A%D0%BE%D1%80%D0%B8%D1%81%D1%82%D1%83%D0%B2%D0%B0%D1%87:Aazdebska.fitu19</packagerurl>
-    <description>Subscription and Notifications Package contains Newsletter Subscription Module and Notifications on New Article Content Plugin. 
-    Newsletter Subscription Module allows your site visitors subscribe for news using email and/or via telegram channel. 
-    Notifications on New Article Content Plugin will automatically notify your subscribers on new articles via telegram and/or email. 
-    Subscription list is stored within module directory in txt file, you can add or remove subscribers from it as you like. 
-    Don't forget to enable extensions and edit settings fields so everything could work properly.</description>
+    <authorUrl>https://github.com/AntoninaZz</authorUrl>
+    <packager>Bogdan Shumylo</packager>
+    <packagerurl>https://github.com/bshumylo</packagerurl>
+    <copyright>(C) 2022-2026 Antonina Zdebska</copyright>
+    <license>GNU General Public License version 3; https://www.gnu.org/licenses/gpl-3.0</license>
+    <description>Subscription and Notifications Package for Joomla 6: the Newsletter Subscription module lets visitors subscribe via email and/or Telegram; the Content - New Article Notifications plugin announces new published articles via email, Telegram and Mattermost (incoming webhook). Subscribers are stored in the database.</description>
     <scriptfile>pkg_script.php</scriptfile>
     <files folder="packages">
-        <file type="module" id="newsletter_subscription" client="site">mod_newsletter_subscription.zip</file>
-        <file type="plugin" id="new_article_notifications" group="content">plg_con_new_article_notifications.zip</file>
+        <file type="module" client="site" id="newsletter_subscription">mod_newsletter_subscription.zip</file>
+        <file type="plugin" group="content" id="new_article_notifications">plg_content_new_article_notifications.zip</file>
     </files>
 </extension>
