@@ -1,3 +1,10 @@
 dist/
 docker-logs/
 *.zip
+docker-test/
+*.bat
+test-run-*
+*-console.log
+check-db.log
+debug-subscribe.log
+flow-tests.log

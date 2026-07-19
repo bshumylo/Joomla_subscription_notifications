@@ -10,6 +10,7 @@ use Joomla\CMS\Helper\HelperFactoryAwareTrait;
 use Joomla\CMS\Language\Text;
 use Joomla\CMS\Session\Session;
 use Joomla\CMS\Uri\Uri;
+use Zdebska\Module\NewsletterSubscription\Site\Helper\NewsletterSubscriptionHelper;
 
 class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareInterface
 {
@@ -28,6 +29,7 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
 
     private function handleSubmission($params): void
     {
+        /** @var \Joomla\CMS\Application\SiteApplication $app */
         $app   = $this->getApplication();
         $input = $app->getInput();
 
@@ -49,6 +51,8 @@ class Dispatcher extends AbstractModuleDispatcher implements HelperFactoryAwareI
         }
 
         $email  = $input->post->get('email', '', 'string');
+
+        /** @var NewsletterSubscriptionHelper $helper */
         $helper = $this->getHelperFactory()->getHelper('NewsletterSubscriptionHelper');
 
         if ($subscribe) {

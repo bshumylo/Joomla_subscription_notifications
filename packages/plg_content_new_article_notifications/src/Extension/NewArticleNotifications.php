@@ -255,9 +255,11 @@ final class NewArticleNotifications extends CMSPlugin implements SubscriberInter
                 10
             );
 
-            if ($response->code < 200 || $response->code >= 300) {
+            $status = $response->getStatusCode();
+
+            if ($status < 200 || $status >= 300) {
                 Log::add(
-                    sprintf('%s notification failed (HTTP %d): %s', $service, $response->code, (string) $response->body),
+                    sprintf('%s notification failed (HTTP %d): %s', $service, $status, (string) $response->getBody()),
                     Log::WARNING,
                     self::LOG_CATEGORY
                 );

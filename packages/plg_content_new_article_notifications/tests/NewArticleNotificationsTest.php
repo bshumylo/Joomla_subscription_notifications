@@ -2,6 +2,8 @@
 
 require_once __DIR__ . '/bootstrap.php';
 
+\defined('_JEXEC') or die;
+
 use PHPUnit\Framework\TestCase;
 use Zdebska\Plugin\Content\NewArticleNotifications\Extension\NewArticleNotifications;
 
