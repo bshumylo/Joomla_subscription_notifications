@@ -1,0 +1,52 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Build package
+        run: |
+          chmod +x build.sh
+          ./build.sh
+
+      - name: Resolve artifact path
+        id: artifact
+        run: |
+          VERSION=$(sed -n 's:.*<version>\(.*\)</version>.*:\1:p' pkg_subscription_and_notifications.xml | head -1)
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "path=dist/pkg_subscription_and_notifications-${VERSION}.zip" >> "$GITHUB_OUTPUT"
+
+      - name: Verify tag matches manifest version
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          TAG="${GITHUB_REF_NAME#v}"
+          MANIFEST="${{ steps.artifact.outputs.version }}"
+          if [ "$TAG" != "$MANIFEST" ]; then
+            echo "Tag v$TAG does not match manifest version $MANIFEST" >&2
+            exit 1
+          fi
+
+      - name: Create GitHub Release with the package attached
+        if: startsWith(github.ref, 'refs/tags/v')
+        uses: softprops/action-gh-release@v2
+        with:
+          files: ${{ steps.artifact.outputs.path }}
+          generate_release_notes: true
+
+      - name: Upload build artifact (manual runs)
+        if: "!startsWith(github.ref, 'refs/tags/v')"
+        uses: actions/upload-artifact@v4
+        with:
+          name: pkg_subscription_and_notifications
+          path: ${{ steps.artifact.outputs.path }}

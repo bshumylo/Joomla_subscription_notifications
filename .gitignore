@@ -1,10 +1,19 @@
-dist/
-docker-logs/
+# Build artifacts — the release zip is attached to GitHub Releases, never committed
+/dist/
 *.zip
-docker-test/
-*.bat
+
+# Logs from local Docker test runs
+docker-logs/
+*.log
 test-run-*
-*-console.log
-check-db.log
-debug-subscribe.log
-flow-tests.log
+
+# OS / editor noise
+.DS_Store
+Thumbs.db
+*~
+.idea/
+.vscode/
+
+# PHP tooling
+/vendor/
+.phpunit.result.cache
