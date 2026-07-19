@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="package" method="upgrade">
-    <name>Subscription and Notifications Package</name>
+    <name>Subscribe &amp; Notify</name>
     <packagename>subscription_and_notifications</packagename>
     <version>2.0.0</version>
     <creationDate>2026-07-19</creationDate>
-    <author>Antonina Zdebska</author>
-    <authorEmail>aazdebska.fitu19@kubg.edu.ua</authorEmail>
-    <authorUrl>https://github.com/AntoninaZz</authorUrl>
+    <author>Bogdan Shumylo</author>
+    <authorEmail>bshumylo@gmail.com</authorEmail>
+    <authorUrl>https://github.com/bshumylo</authorUrl>
     <packager>Bogdan Shumylo</packager>
     <packagerurl>https://github.com/bshumylo</packagerurl>
-    <copyright>(C) 2022-2026 Antonina Zdebska</copyright>
-    <license>GNU General Public License version 3; https://www.gnu.org/licenses/gpl-3.0</license>
-    <description>Subscription and Notifications Package for Joomla 6: the Newsletter Subscription module lets visitors subscribe via email and/or Telegram; the Content - New Article Notifications plugin announces new published articles via email, Telegram and Mattermost (incoming webhook). Subscribers are stored in the database.</description>
+    <copyright>(C) 2022-2025 Antonina Zdebska; (C) 2026 Bogdan Shumylo</copyright>
+    <license>GNU General Public License version 3 or later; https://www.gnu.org/licenses/gpl-3.0</license>
+    <description>Subscribe &amp; Notify — newsletter subscription and new article notifications for Joomla. Visitors subscribe by email or Telegram through the subscription module; the content plugin automatically announces every newly published article by email, Telegram and Mattermost (incoming webhook). Subscribers are stored in the site database. Keywords: newsletter, subscribe, subscription, notification, email, Telegram, Mattermost, alerts.</description>
     <scriptfile>pkg_script.php</scriptfile>
     <files folder="packages">
         <file type="module" client="site" id="newsletter_subscription">mod_newsletter_subscription.zip</file>

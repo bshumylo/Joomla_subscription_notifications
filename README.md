@@ -1,8 +1,8 @@
-# Joomla Subscription and Notifications Package
+# Subscribe &amp; Notify — Newsletter Subscription and Article Notifications for Joomla
 
-A set of two Joomla! extensions — a **Newsletter Subscription Module** and a **New Article Notifications Plugin** — that manage news subscriptions and automatically announce new articles.
+A package of two Joomla! extensions — a **newsletter subscription module** and a **new article notifications plugin** — that let visitors subscribe to your news and automatically announce every newly published article by **email, Telegram and Mattermost**.
 
-**Version 2.0.0 targets Joomla 6.x** (namespaced extensions, DI service providers, `SubscriberInterface` plugin events). For the legacy Joomla 3 version see the [1.0.0 tag / original upstream](https://github.com/AntoninaZz/pkg_subscription_and_notifications).
+**Version 2.x targets Joomla 6.x** (namespaced extensions, DI service providers, `SubscriberInterface` plugin events). For the legacy Joomla 3 version see the [original upstream project](https://github.com/AntoninaZz/pkg_subscription_and_notifications).
 
 ## Features
 
@@ -21,7 +21,7 @@ A set of two Joomla! extensions — a **Newsletter Subscription Module** and a *
 
 ## Installation
 
-1. Run `./build.sh` (or download the release zip) to get `dist/pkg_subscription_and_notifications-2.0.0.zip`.
+1. Download `pkg_subscription_and_notifications-x.y.z.zip` from the [latest release](../../releases/latest), or build it yourself with `./build.sh`.
 2. Install it via **System → Install → Extensions**.
 3. Publish the **Newsletter Subscription** module and configure the **Content - New Article Notifications** plugin (enabled automatically on install).
 
@@ -40,7 +40,20 @@ Notifications are sent only for articles **created in the published state** in t
 
 * Sources live under `packages/`; `build.sh` produces the installable package in `dist/`.
 * PHPUnit tests: `packages/plg_content_new_article_notifications/tests/` (run inside a Joomla container, `JOOMLA_ROOT` env points to the Joomla root).
+* Local Docker test harness: `docker-test/` (`RUN_TESTS.bat` on Windows).
+* Releases are automated: pushing a `vX.Y.Z` tag builds the package and attaches the zip to a GitHub Release. The tag must match `<version>` in `pkg_subscription_and_notifications.xml`. Build artifacts are never committed.
+
+## Credits
+
+This project is a fork of [pkg_subscription_and_notifications](https://github.com/AntoninaZz/pkg_subscription_and_notifications) by **Antonina Zdebska**, originally released in 2022 under the GPL-3.0.
+
+Version 2.x is an extensive rework by **Bogdan Shumylo**: port to Joomla 6, namespaced extensions and DI service providers, database-backed subscriber storage replacing the plaintext file, CSRF protection, Mattermost support, translations and an automated test and release pipeline. The original design and functionality remain the work of the original author.
 
 ## License
 
-GPL-3.0 — see [LICENSE](LICENSE).
+GPL-3.0-or-later — see [LICENSE](LICENSE).
+
+Copyright (C) 2022-2025 Antonina Zdebska
+Copyright (C) 2026 Bogdan Shumylo
+
+This program is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.

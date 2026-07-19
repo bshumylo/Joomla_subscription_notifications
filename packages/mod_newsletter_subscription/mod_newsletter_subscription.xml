@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <extension type="module" client="site" method="upgrade">
     <name>MOD_NEWSLETTER_SUBSCRIPTION</name>
-    <author>Antonina Zdebska</author>
-    <authorEmail>aazdebska.fitu19@kubg.edu.ua</authorEmail>
-    <authorUrl>https://github.com/AntoninaZz</authorUrl>
+    <author>Bogdan Shumylo</author>
+    <authorEmail>bshumylo@gmail.com</authorEmail>
+    <authorUrl>https://github.com/bshumylo</authorUrl>
     <creationDate>2026-07-19</creationDate>
-    <copyright>(C) 2022-2026 Antonina Zdebska</copyright>
-    <license>GNU General Public License version 3; https://www.gnu.org/licenses/gpl-3.0</license>
+    <copyright>(C) 2022-2025 Antonina Zdebska; (C) 2026 Bogdan Shumylo</copyright>
+    <license>GNU General Public License version 3 or later; https://www.gnu.org/licenses/gpl-3.0</license>
     <version>2.0.0</version>
     <description>MOD_NEWSLETTER_SUBSCRIPTION_XML_DESCRIPTION</description>
     <namespace path="src">Zdebska\Module\NewsletterSubscription</namespace>
