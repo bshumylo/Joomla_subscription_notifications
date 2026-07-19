@@ -30,10 +30,12 @@ jobs:
       - name: Verify tag matches manifest version
         if: startsWith(github.ref, 'refs/tags/v')
         run: |
+          # Accept v2.0.0 and v.2.0.0 alike
           TAG="${GITHUB_REF_NAME#v}"
+          TAG="${TAG#.}"
           MANIFEST="${{ steps.artifact.outputs.version }}"
           if [ "$TAG" != "$MANIFEST" ]; then
-            echo "Tag v$TAG does not match manifest version $MANIFEST" >&2
+            echo "Tag $GITHUB_REF_NAME does not match manifest version $MANIFEST" >&2
             exit 1
           fi
 
